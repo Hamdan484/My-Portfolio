@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Code2, BriefcaseBusiness, ArrowDown, Terminal } from "lucide-react";
-import profileImage from "../../dist/assets/images/profileImage.png";
+import profileImage from "../../public/assets/images/profileImage.png";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -61,11 +61,9 @@ export default function Hero() {
               {...fadeUp(0.1)}
               className="flex items-center gap-2 mb-6"
             >
-             
               <span className="font-mono text-xs text-[#3B82F6] tracking-widest uppercase">
                 Available for work
               </span>
-             
             </motion.div>
 
             <motion.h1
@@ -86,8 +84,8 @@ export default function Hero() {
                 Hamdan Ibrahim
               </strong>
               , a MERN Stack Developer who designs and ships scalable web
-              applications From elegant digital experiences to robust server-side
-              architectures.
+              applications From elegant digital experiences to robust
+              server-side architectures.
             </motion.p>
 
             <motion.div

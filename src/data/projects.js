@@ -1,49 +1,47 @@
-
-import mediflow from "../../dist/assets/images//mediflow.png";
-import chilax from "../../dist/assets/images//chilax.png";
-import kawuteProperties from "../../dist/assets/images//kawuteProperties.png";
-import chinova from "../../dist/assets/images//chinova.png";
-
+import mediflow from "../../public/assets/images/mediflow.png";
+import chilax from "../../public/assets/images/chilax.png";
+import kawuteProperties from "../../public/assets/images/kawuteProperties.png";
+import chinova from "../../public/assets/images/chinova.png";
 
 export const projects = [
   {
     id: 1,
-    title: 'Mediflow',
+    title: "Mediflow",
     description:
-      'A real-time telemedicine platform that enables patients to consult with doctors via video calls, chat, and appointment scheduling, with a secure backend for managing medical records.',
+      "A real-time telemedicine platform that enables patients to consult with doctors via video calls, chat, and appointment scheduling, with a secure backend for managing medical records.",
     image: mediflow,
-    tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS'],
-    liveUrl: 'https://Hamdan484.github.io/MEDIFLOW',
-    repoUrl: 'https://github.com/Hamdan484/MEDIFLOW',
+    tech: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+    liveUrl: "https://Hamdan484.github.io/MEDIFLOW",
+    repoUrl: "https://github.com/Hamdan484/MEDIFLOW",
   },
   {
     id: 2,
-    title: 'Chilax — Streaming platform',
+    title: "Chilax — Streaming platform",
     description:
-      'A streaming platform that allows users to watch movies and TV shows, create watchlists, and receive personalized recommendations based on their viewing history.',
+      "A streaming platform that allows users to watch movies and TV shows, create watchlists, and receive personalized recommendations based on their viewing history.",
     image: chilax,
-    tech: ['React', 'Node.js', 'Express.js', 'mySql', 'Tailwind CSS'],
-    liveUrl: 'https://hamdan484.github.io/Chilax/',
-    repoUrl: 'https://github.com/Hamdan484/Chilax',
+    tech: ["React", "Node.js", "Express.js", "mySql", "Tailwind CSS"],
+    liveUrl: "https://hamdan484.github.io/Chilax/",
+    repoUrl: "https://github.com/Hamdan484/Chilax",
   },
   {
     id: 3,
-    title: 'Kawute Properties — Real Estate Website',
+    title: "Kawute Properties — Real Estate Website",
     description:
-      'A real estate website that allows users to browse and search for properties, view property details, and contact agents for inquiries.',
+      "A real estate website that allows users to browse and search for properties, view property details, and contact agents for inquiries.",
     image: kawuteProperties,
-    tech: ['React', 'MongoDB', 'supabase', 'Tailwind CSS'],
-    liveUrl: 'https://kawute-properties.vercel.app/',
-    repoUrl: 'https://github.com/Hamdan484/Kawute-Properties',
+    tech: ["React", "MongoDB", "supabase", "Tailwind CSS"],
+    liveUrl: "https://kawute-properties.vercel.app/",
+    repoUrl: "https://github.com/Hamdan484/Kawute-Properties",
   },
   {
     id: 4,
-    title: 'chinova ',
+    title: "chinova ",
     description:
-      'A coffee shop website that allows users to browse and search for coffee products, view product details, and place orders online.',
+      "A coffee shop website that allows users to browse and search for coffee products, view product details, and place orders online.",
     image: chinova,
-    tech: ['Node.js', 'Express.js', 'MongoDB', 'JWT', 'React', 'Tailwind CSS'],
-    liveUrl: 'https://hamdan484.github.io/Chinova/',
-    repoUrl: 'https://github.com/Hamdan484/Chinova',
+    tech: ["Node.js", "Express.js", "MongoDB", "JWT", "React", "Tailwind CSS"],
+    liveUrl: "https://hamdan484.github.io/Chinova/",
+    repoUrl: "https://github.com/Hamdan484/Chinova",
   },
-]
+];
