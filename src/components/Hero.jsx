@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Code2, BriefcaseBusiness, ArrowDown, Terminal } from "lucide-react";
-import profileImage from "../../public/assets/images/profileImage.png";
+
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -139,7 +139,10 @@ export default function Hero() {
             className="hidden lg:block"
           >
             <div className="relative rounded-full border border-white/8 bg-steal-500 backdrop-blur overflow-hidden shadow-2xl">
-              <img src={profileImage} alt="Hamdan's profile image" />
+              <img
+  src={`${import.meta.env.BASE_URL}assets/images/profileImage.png`}
+  alt="Hamdan's profile image"
+/>
             </div>
           </motion.div>
         </div>

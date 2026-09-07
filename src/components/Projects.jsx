@@ -22,7 +22,7 @@ function ProjectCard({ project, index, inView }) {
           alt={project.title}
           className="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#111827] via-[#111827]/40 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-[#111827] via-[#111827]/40 to-transparent" />
         {/* Index tag */}
         <span className="absolute top-4 right-4 font-mono text-xs text-[#3B82F6] bg-[#0B1120]/80 border border-[#3B82F6]/30 px-2.5 py-1 rounded">
           {String(index + 1).padStart(2, "0")}

@@ -22,7 +22,7 @@ function TimelineItem({ item, index, inView }) {
     >
       {/* Connector line */}
       {index < 3 && (
-        <div className="absolute left-[18px] top-10 bottom-0 w-px bg-white/5 -translate-x-1/2" />
+        <div className="absolute left-4.5 top-10 bottom-0 w-px bg-white/5 -translate-x-1/2" />
       )}
 
       {/* Icon node */}
