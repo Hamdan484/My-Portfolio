@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "format": "oxfmt",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "node scripts/deploy-gh-pages.mjs"
   },
   "dependencies": {
     "framer-motion": "^13.2.0",
