@@ -2,6 +2,8 @@ import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Send, MapPin, Mail, Code2, BriefcaseBusiness } from "lucide-react";
 
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
 export default function Contact() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
@@ -14,39 +16,39 @@ export default function Contact() {
   };
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  setStatus("sending");
+    setStatus("sending");
 
-  try {
-    const response = await fetch("http://localhost:5000/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(form),
-    });
-
-    const data = await response.json();
-
-    if (response.ok) {
-      console.log(data);
-
-      setStatus("sent");
-      setForm({
-        name: "",
-        email: "",
-        message: "",
+    try {
+      const response = await fetch(`${API_URL}/api/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
       });
-    } else {
-      console.error(data);
+
+      const data = await response.json();
+
+      if (response.ok) {
+        console.log(data);
+
+        setStatus("sent");
+        setForm({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        console.error(data);
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error("Error:", error);
       setStatus("error");
     }
-  } catch (error) {
-    console.error("Error:", error);
-    setStatus("error");
-  }
-};
+  };
 
   return (
     <section id="contact" className="py-32">
@@ -59,7 +61,7 @@ export default function Contact() {
           className="flex items-center gap-3 mb-16"
         >
           <span className="font-mono text-xs text-[#3B82F6] tracking-widest uppercase">
-           Contact
+            Contact
           </span>
           <div className="flex-1 h-px bg-white/5" />
         </motion.div>
@@ -77,7 +79,9 @@ export default function Contact() {
               <span className="text-[#94A3B8]">together.</span>
             </h2>
             <p className="text-[#94A3B8] leading-relaxed mb-10 max-w-sm">
-              Do you have a project we can work on? or do you have a question? Feel free to reach out to me using the form or contact information below.
+              Do you have a project we can work on? or do you have a question?
+              Feel free to reach out to me using the form or contact information
+              below.
             </p>
 
             <div className="space-y-5">
