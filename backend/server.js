@@ -7,7 +7,10 @@ const { Resend } = require("resend");
 const app = express();
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const allowedOrigins = ["https://Hamdan484.github.io", "http://localhost:5173"];
+const allowedOrigins = new Set([
+  "https://hamdan484.github.io",
+  "http://localhost:5173",
+]);
 
 function escapeHtml(value) {
   return value.replace(
@@ -24,7 +27,17 @@ function escapeHtml(value) {
 }
 
 // Middleware
-app.use(cors({ origin: allowedOrigins }));
+app.use(
+  cors({
+    origin(origin, callback) {
+      if (!origin || allowedOrigins.has(origin.toLowerCase())) {
+        return callback(null, true);
+      }
+
+      return callback(new Error("Origin not allowed by CORS"));
+    },
+  }),
+);
 app.use(express.json());
 
 // Test route
